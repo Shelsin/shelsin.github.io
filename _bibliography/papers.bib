@@ -1,6 +1,19 @@
 ---
 ---
 
+@inproceedings{MotionEcho,
+  abbr      = {ArXiv},
+  preview   = {MotionEcho.png},
+  title     = {Training-Free Motion Customization for Distilled Video Generators with Adaptive Test-Time Distillation},
+  author    = {Jintao Rong and Xin Xie and Xinyi Yu and Linlin Ou and Xinyu Zhang and Chunhua Shen and Dong Gong},
+  booktitle = {ArXiv Preprint},
+  year      = {2025},
+  pdf       = {https://arxiv.org/abs/2506.19348},
+  selected  = {true},
+  abstract  = {Distilled video generation models offer fast and efficient synthesis but struggle with motion customization when guided by reference videos, especially under training-free settings. Existing training-free methods, originally designed for standard diffusion models, fail to generalize due to the accelerated generative process and large denoising steps in distilled models. To address this, we propose MotionEcho, a novel training-free test-time distillation framework that enables motion customization by leveraging diffusion teacher forcing. Our approach uses high-quality, slow teacher models to guide the inference of fast student models through endpoint prediction and interpolation. To maintain efficiency, we dynamically allocate computation across timesteps according to guidance needs. Extensive experiments across various distilled video generation models and benchmark datasets demonstrate that our method significantly improves motion fidelity and generation quality while preserving high efficiency.},
+  code      = {https://euminds.github.io/motionecho/},
+ }
+
 @inproceedings{HiFiST,
   abbr      = {IJCAI},
   preview   = {HiFiST_ijcai2025.png},
