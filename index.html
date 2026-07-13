@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Xin Xie</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1026H9KKXP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1026H9KKXP');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-55MFGGC');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font.css">
+
+    <!-- Custom Styles -->
+    <style>
+        header {
+            width: 100%;
+            height: 45px;
+            margin-top: 0px;
+            text-align: center;
+            background-color: #000000;
+            position: fixed;
+            z-index: 2
+        }
+
+        div.navleft a:link,
+        div.navleft a:visited,
+        div.navright a:link,
+        div.navright a:visited {
+            color: #FFFFFF;
+            text-decoration: none
+        }
+
+        div.navright a:hover {
+            text-decoration: underline
+        }
+
+        div.navleft a:hover {
+            text-decoration: underline
+        }
+
+        div.header {
+            line-height: 45px
+        }
+
+        div.navleft {
+            float: left;
+            padding-left: 90px;
+            font-size: 1.4em;
+            font-weight: 600
+        }
+
+        div.navright {
+            float: right;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 1.2em
+        }
+
+        div.navright-group {
+            float: right;
+            display: flex;
+            align-items: center;
+        }
+
+        div.container a {
+            color: #004a6c;
+            text-decoration: none
+        }
+
+        div.container a:hover {
+            text-decoration: underline
+        }
+
+        body {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+            background-color: #FFFFFF;
+            color: #4F6371;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 2rem;
+        }
+
+        #header {
+            background-color: #FFFFFF;
+            display: flex;
+            align-items: flex-end;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        #footer {
+            background-color: #FFFFFF;
+            padding: 60px;
+        }
+
+        #portrait {
+            border: 3px solid white;
+            border-radius: 12px;
+        }
+
+        #portrait-student {
+            width: 80px;
+            border: 1px solid white;
+            border-radius: 150px;
+        }
+
+        #header-text {
+            margin-top: 60px;
+            margin-left: 220px;
+        }
+
+        #header-text-name {
+            color: #000000;
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        .header-text-email {
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .header-text-desc {
+            font-size: 18px;
+        }
+
+        .vspace-top {
+            margin-top: 30px;
+        }
+
+        .vspace-top-news {
+            margin-top: 15px;
+        }
+
+        .vspace-top-section {
+            margin-top: 60px;
+        }
+
+        .paper-image {
+            width: 150px;
+        }
+
+        .news-date {
+            font-weight: bold;
+        }
+
+        .news-date-red {
+            color: #4b1010;
+            font-weight: bold;
+        }
+
+        .text-red {
+            color: #4b1010;
+        }
+
+        .paper-title {
+            font-weight: bold;
+        }
+
+        .paper-highlight {
+            color: #691616;
+        }
+
+        div.paper-author a {
+            color: #777777;
+            font-weight: 500
+        }
+
+        span.author.sx {
+            color: #000000;
+            font-weight: 600;
+        }
+
+        /* text-decoration:underline} */
+        div.paper-author a:hover {
+            text-decoration: underline
+        }
+
+        /* Mobile responsive styles for navigation */
+        @media (max-width: 768px) {
+            header {
+                height: auto;
+                min-height: 45px;
+                padding: 8px 0;
+                overflow: hidden;
+            }
+
+            div.header {
+                line-height: 1.5;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            div.navleft {
+                float: none;
+                padding-left: 15px;
+                padding-right: 10px;
+                font-size: 1.1em;
+                flex: 0 0 auto;
+            }
+
+            div.navright-group {
+                float: none;
+                display: flex;
+                align-items: center;
+                flex: 0 0 auto;
+            }
+
+            div.navright {
+                float: none;
+                padding-left: 10px;
+                padding-right: 0;
+                font-size: 1em;
+            }
+
+            div.navright:last-child {
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            div.navleft {
+                font-size: 1em;
+                padding-left: 12px;
+            }
+
+            div.navright {
+                font-size: 0.9em;
+                padding-left: 8px;
+            }
+
+            div.header {
+                padding: 0 8px;
+            }
+        }
+    </style>
+
+    <!-- Add this line in the <head> section of your HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55MFGGC" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <a name="Home"></a>
+    <div class="outercontainer">
+        <header>
+            <div class="container header">
+                <div class="navleft text"><a href="index.html#Home">Xin Xie</a></div>
+                <div class="navright-group">
+                    <div class="navright text"><a href="index.html#Pub">Research</a></div>
+                    <div class="navright text"><a href="index.html#Home">Home</a></div>
+                </div>
+            </div>
+        </header>
+
+        <div id="header">
+            <div class="container">
+                <div class="row"><p></p></div>
+                <div class="row"><p></p></div>
+                <div class="row"><p></p></div>
+                <div class="row"><p></p></div>
+                <div class="row">
+                    <div class="col-sm-4 offset-sm-2">
+                        <img src="imgs/profile_pic.png" id="portrait" style="width: 350px;">
+                    </div>
+                    <div class="col-sm-5 offset-sm-1">
+                        <div id="header-text-name"> Xin Xie </div>
+                        <p></p>
+                        <div class="header-text-desc"> Ph.D. student </div>
+                        <div class="header-text-desc"> UNSW, Sydney, Aus</div>
+                        <br>
+                        <div class="header-text-email">
+                            <span class="email" data-user="shelsin" data-domain="163.com"></span><br>
+                            <span class="email" data-user="shelsin.ckg" data-domain="gmail.com"></span>
+                        </div>
+                        <p></p>
+                        <div>
+                            <img src="imgs/google-scholar.svg" alt="Google Scholar" style="width: 16px; height: 16px; vertical-align: middle;"><a href="https://scholar.google.com/citations?user=9GQ3rsAAAAJ"> Google Scholar</a> /
+                            <img src="imgs/cv.svg" alt="CV" style="width: 16px; height: 16px; vertical-align: middle;"><a href="pdf/CV.pdf"> CV </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row vspace-top">
+                <div class="col offset-sm-1">
+                    <h1>About Me</h1>
+                    <p>
+                        Hello! I am a third-year Ph.D. student at <a href="https://www.unsw.edu.au/">University of New South Wales (UNSW Sydney)</a>, supervised by Dr.<a href="https://donggong1.github.io/">Dong Gong</a> and Dr.<a href="https://cgi.cse.unsw.edu.au/~blair/">Alan Blair</a>.
+                    </p>
+                    <p>
+                        Before that, I obtained my Master's degree at <a href="https://en.dlut.edu.cn/">Dalian University of Technology (DLUT)</a> in 2024,
+                        supervised by Associate Prof. <a href="http://faculty.dlut.edu.cn/liyi/en/index.htm">Yi Li</a> and Prof. <a href="https://faculty.dlut.edu.cn/GuoYanqing/zh_CN/index.htm">Yanqing Guo</a>.
+                        I obtained my Bachelor's degree from Dalian Maritime University.
+                    </p>
+                    <p>
+                        <i><b>My current research interest lies in Reinforcement Learning and Video World Models.</b></i>
+                    </p>
+
+                    <div class="row vspace-top-news">
+                        <section class="container lead">
+                            <div class="vspace-top" style="font-size:16px">
+                                <h1>Internships</h1>
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/bytedance.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div><b style="font-weight: 900 !important;">ByteDance</b></div>
+                                        <div><i>Jun.2022 ~ Feb.2023</i></div>
+                                        <div>Research Intern in ByteDance Intelligent Creation Lab (Beijing)</div>
+                                        <div>Advisors: <a href="https://scholar.google.com/citations?user=gvUL1ZoAAAAJ&hl=en">Miao Hua</a>, <a href="https://scholar.google.com/citations?user=9rWWCgUAAAAJ&hl=zh-CN">Qian He</a></div>
+                                        <div>Topics: Style Transfer and Image-to-Image Translation</div>
+                                    </div>
+                                </div>
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/casia_logo.jpg" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div><b style="font-weight: 900 !important;">Institute of Automation, Chinese Academy of Sciences</b></div>
+                                        <div><i>Jul.2021 ~ Sep.2021</i></div>
+                                        <div>Research Assistant in National Laboratory of Pattern Recognition (Beijing)</div>
+                                        <div>Advisors: Associate Prof. <a href="https://hhb072.github.io/">Huaibo Huang</a>, Prof. <a href="https://rhe-web.github.io/">Ran He</a></div>
+                                        <div>Topics: Style Transfer and Image-to-Image Translation</div>
+                                    </div>
+                                </div>
+
+                                <div class="vspace-top-section">
+                                    <a name="Pub"></a>
+                                    <h1>Representative Publications</h1>
+                                    (* indicates equal contribution; ^ indicates the first author is supervisor)
+                                    <br>
+                                    For full publication list, please refer to my <img src="imgs/google-scholar.svg" alt="Google Scholar" style="width: 20px; height: 20px; vertical-align: middle;"><a href="https://scholar.google.com/citations?user=9GQ3rsAAAAJ"> Google Scholar page.</a>
+                                    <br>
+                                </div>
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/publication_preview/MotionEcho.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="paper-title">
+                                            When Distillation Breaks Motion Control: Restoring Generative Trajectories for Fast Video Generators
+                                        </div>
+                                        <div class="paper-desc">
+                                            ECCV, 2026
+                                        </div>
+                                        <div class="paper-author">
+                                            <span class="author">Jintao Rong*, Xin Xie*, Xinyi Yu, Linlin Ou, Xinyu Zhang, Chunhua Shen, Dong Gong</span>
+                                        </div>
+                                        <div>
+                                            <a href="https://euminds.github.io/motionecho/"><img src="https://img.shields.io/badge/Website-blue?logo=github" alt="Website"></a>
+                                            <a href="https://arxiv.org/abs/2506.19348"><img src="https://img.shields.io/badge/Paper-red" alt="Paper"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/publication_preview/hyperalign.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="paper-title">
+                                            HyperAlign: Hypernetwork for Efficient Test-Time Alignment of Diffusion Models
+                                        </div>
+                                        <div class="paper-desc">
+                                            Arxiv, 2026
+                                        </div>
+                                        <div class="paper-author">
+                                            <span class="author">Xin Xie, Jiaxian Guo, Dong Gong</span>
+                                        </div>
+                                        <div>
+                                            <a href="https://shelsin.github.io/hyperalign.github.io/"><img
+                                                    src="https://img.shields.io/badge/Website-blue?logo=github" alt="Website"></a>
+                                            <a href="https://arxiv.org/abs/2601.15968"><img src="https://img.shields.io/badge/Paper-red"
+                                                    alt="Paper"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/publication_preview/HiFiST_ijcai2025.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="paper-title">
+                                            Efficient Hi-Fi Style Transfer via Statistical Attention and Modulation
+                                        </div>
+                                        <div class="paper-desc">
+                                            IJCAI, 2025
+                                        </div>
+                                        <div class="paper-author">
+                                            <span class="author">Zhirui Fang, Yi Li, Xin Xie, and Chengyan Li, Yanqing Guo</span>
+                                        </div>
+                                        <div>
+                                             <a href="https://www.ijcai.org/proceedings/2025/110"><img src="https://img.shields.io/badge/Paper-red"
+                                                    alt="Paper"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/publication_preview/DyMO_cvpr2025.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="paper-title">
+                                            DyMO: Training-Free Diffusion Model Alignment with Dynamic Multi-Objective Scheduling
+                                        </div>
+                                        <div class="paper-desc">
+                                            CVPR, 2025
+                                        </div>
+                                        <div class="paper-author">
+                                            <span class="author">Xin Xie, Dong Gong</span>
+                                        </div>
+                                        <div>
+                                            <a href="https://shelsin.github.io/dymo.github.io/"><img
+                                                    src="https://img.shields.io/badge/Website-blue?logo=github" alt="Website"></a>
+                                            <a href="https://arxiv.org/abs/2412.00759"><img src="https://img.shields.io/badge/Paper-red"
+                                                    alt="Paper"></a>
+                                            <a href="pdf/DyMO_CVPR25_Poster.pdf"><img src="https://img.shields.io/badge/Poster-purple" alt="Poster"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/publication_preview/RoNet_Framework.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="paper-title">
+                                            RoNet: Rotation-oriented Continuous Image Translation
+                                        </div>
+                                        <div class="paper-desc">
+                                            Arxiv, 2024
+                                        </div>
+                                        <div class="paper-author">
+                                            <span class="author">Yi Li, Xin Xie^, Lina Lei, and Haiyan Fu, Yanqing Guo, Ming Yao</span>
+                                        </div>
+                                        <div>
+                                            <a href="https://arxiv.org/abs/2404.04474"><img src="https://img.shields.io/badge/Paper-red"
+                                                    alt="Paper"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/publication_preview/Compact_Transformer_icme2023.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="paper-title">
+                                            A Compact Transformer for Adaptive Style Transfer
+                                        </div>
+                                        <div class="paper-desc">
+                                            ICME, 2023
+                                        </div>
+                                        <div class="paper-author">
+                                            <span class="author">Yi Li, Xin Xie^, Haiyan Fu, and Xiangyang Luo, Yanqing Guo</span>
+                                        </div>
+                                        <div>
+                                            <a href="https://ieeexplore.ieee.org/abstract/document/10219607"><img src="https://img.shields.io/badge/Paper-red"
+                                                    alt="Paper"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/publication_preview/artins_cvpr2022.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="paper-title">
+                                            Artistic Style Discovery with Independent Components
+                                        </div>
+                                        <div class="paper-desc">
+                                            CVPR, 2022
+                                        </div>
+                                        <div class="paper-author">
+                                            <span class="author">Xin Xie, Yi Li, Huaibo Huang, and Haiyan Fu, Wanwan Wang, Yanqing Guo</span>
+                                        </div>
+                                        <div>
+                                            <a href="https://github.com/Shelsin/ArtIns"><img src="https://img.shields.io/badge/Website-blue?logo=github"
+                                                    alt="Website"></a>
+                                            <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Xie_Artistic_Style_Discovery_With_Independent_Components_CVPR_2022_paper.pdf"><img src="https://img.shields.io/badge/Paper-red"
+                                                    alt="Paper"></a>
+                                            <a href="pdf/artins_cvpr2022_poster.pdf"><img src="https://img.shields.io/badge/Poster-purple" alt="Poster"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vspace-top-section">
+                                    <a name="Pub"></a>
+                                    <h1>Other Collaborations</h1>
+                                </div>
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/publication_preview/ParaRec_pakdd2025.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="paper-title">
+                                            Parallel Graph Convolutional Network for Multi-modal Recommendation
+                                        </div>
+                                        <div class="paper-desc">
+                                            PAKDD, 2025
+                                        </div>
+                                        <div class="paper-author">
+                                            <span class="author">Wanru Niu, Yi Li, Jianfei Liu, Xin Xie, Haiyan Fu, Yanqing Guo</span>
+                                        </div>
+                                        <div>
+                                            <a href="https://link.springer.com/chapter/10.1007/978-981-96-8180-8_26"><img
+                                                    src="https://img.shields.io/badge/Paper-red" alt="Paper"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/publication_preview/FedA_Hash.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="paper-title">
+                                            Federating Hashing Networks Adaptively for Privacy-Preserving Retrieval
+                                        </div>
+                                        <div class="paper-desc">
+                                            ICME, 2023
+                                        </div>
+                                        <div class="paper-author">
+                                            <span class="author">Yi Li, Meihua Yu, Xin Xie^, Haiyan Fu, Hao He, Yanqing Guo</span>
+                                        </div>
+                                        <div>
+                                            <a href="https://ieeexplore.ieee.org/abstract/document/10219773"><img
+                                                    src="https://img.shields.io/badge/Paper-red" alt="Paper"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/publication_preview/miccai_brainLesion_workshop2023.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="paper-title">
+                                            Enhancing Encoder with Attention Gate for Multimodal Brain Tumor Segmentation
+                                        </div>
+                                        <div class="paper-desc">
+                                            MICCAI BrainLesion Workshop, 2023
+                                        </div>
+                                        <div class="paper-author">
+                                            <span class="author">Yi Li, Zhirui Fang, Di Li, Xin Xie^, Yanqing Guo</span>
+                                        </div>
+                                        <div>
+                                            <a href="https://link.springer.com/chapter/10.1007/978-3-031-76163-8_12"><img
+                                                    src="https://img.shields.io/badge/Paper-red" alt="Paper"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="vspace-top-section">
+                                    <h1>Services</h1>
+                                </div>
+                                <div>
+                                    I actively serve as a reviewer for CVPR, IJCAI, MICCAI, ICCV, ECCV, NeurIPS.
+                                </div>
+
+
+
+                                <div class="vspace-top-section">
+                                    <h1>Awards</h1>
+                                </div>
+                                <div class="row vspace-top-news">
+                                    <div class="col-auto news-date">Apr.2026</div>
+                                    <div class="col">The Norman Foo Memorial Best Research Paper Prize, University of New South Wales</div>
+                                </div>
+                                <div class="row vspace-top-news">
+                                    <div class="col-auto news-date">Nov.2025</div>
+                                    <div class="col">Best Poster Presentation Awardee, Sydney AI Meetup</div>
+                                </div>
+                                <div class="row vspace-top-news">
+                                    <div class="col-auto news-date">Aug.2024</div>
+                                    <div class="col">University International Postgraduate Award, University of New South Wales</div>
+                                </div>
+                                <div class="row vspace-top-news">
+                                    <div class="col-auto news-date">Oct.2022</div>
+                                    <div class="col">Huawei Scholarship, Dalian University of Technology</div>
+                                </div>
+                                <div class="row vspace-top-news">
+                                    <div class="col-auto news-date">Oct.2022</div>
+                                    <div class="col">First-class Scholarship, Dalian University of Technology</div>
+                                </div>
+                                <div class="row vspace-top-news">
+                                    <div class="col-auto news-date">Oct.2022</div>
+                                    <div class="col">Outstanding Postgraduate Students, Dalian University of Technology</div>
+                                </div>
+                                <div class="row vspace-top-news">
+                                    <div class="col-auto news-date">Sep.2021</div>
+                                    <div class="col">Second-class Scholarship, Dalian University of Technology</div>
+                                </div>
+                                <div class="row vspace-top-news">
+                                    <div class="col-auto news-date">Jun.2021</div>
+                                    <div class="col">Outstanding Graduate, Dalian Maritime University</div>
+                                </div>
+                                <div class="row vspace-top-news">
+                                    <div class="col-auto news-date">Aug.2019</div>
+                                    <div class="col">National Second-Class Prize of the 14th NXP Cup National University Students Intelligent Car Race</div>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer" class="vspace-top">
+            <div style="text-align:center">
+                Last updated: Jul.2026 <a href="index.html#Home">🔝 Back to Top</a>
+            </div>
+            <div>
+            </div>
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script>
+                (function () {
+                    var el = document.getElementById('solaris-authors');
+                    if (el && Math.random() < 0.5) {
+                        el.textContent = el.textContent.replace(
+                            'Oscar Michel†*, Georgy Savva†*,',
+                            'Georgy Savva†*, Oscar Michel†*,'
+                        );
+                    }
+                })();
+                (function () {
+                    var emailSpans = document.querySelectorAll('.email[data-user][data-domain]');
+                    emailSpans.forEach(function (span) {
+                        var user = span.getAttribute('data-user');
+                        var domain = span.getAttribute('data-domain');
+                        if (!user || !domain) return;
+                        var text = user + ' [at] ' + domain.replace(/\./g, ' [dot] ');
+                        var link = document.createElement('a');
+                        link.href = 'mailto:' + user + '@' + domain;
+                        link.textContent = text;
+                        span.textContent = '';
+                        span.appendChild(link);
+                    });
+                })();
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
