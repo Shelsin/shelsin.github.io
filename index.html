@@ -28,9 +28,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="icon" type="image/png" href="imgs/crab.png">
+
+    <!-- Canonical URL & social preview -->
+    <link rel="canonical" href="https://shelsin.github.io/">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://shelsin.github.io/">
+    <meta property="og:title" content="Xin Xie">
+    <meta property="og:site_name" content="Xin Xie">
+    <meta property="og:image" content="https://shelsin.github.io/imgs/profile_pic.png">
+    <meta property="profile:first_name" content="Xin">
+    <meta property="profile:last_name" content="Xie">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Xin Xie">
+    <meta name="twitter:image" content="https://shelsin.github.io/imgs/profile_pic.png">
+
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
 
     <!-- Custom Styles -->
     <style>
@@ -94,15 +109,16 @@
         }
 
         body {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-family: 'Roboto', Verdana, Helvetica, sans-serif;
             font-size: 16px;
             background-color: #FFFFFF;
             color: #4F6371;
         }
 
-        h1 {
+        h1,
+        h2 {
             font-weight: 300;
-            font-size: 2rem;
+            font-size: 1.75rem;
         }
 
         #header {
@@ -118,9 +134,17 @@
             padding: 60px;
         }
 
+        /* 正文区左右留白：左 ≈140px，右 ≈120px（按容器宽度等比缩放） */
+        @media (min-width: 576px) {
+            #content-col {
+                padding-left: 9.65%;
+                padding-right: 7.9%;
+            }
+        }
+
         #portrait {
-            border: 3px solid white;
             border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 10px 28px rgba(0, 0, 0, 0.16);
         }
 
         #portrait-student {
@@ -138,6 +162,7 @@
             color: #000000;
             font-size: 40px;
             font-weight: 500;
+            margin-bottom: 0;
         }
 
         .header-text-email {
@@ -167,6 +192,8 @@
 
         .news-date {
             font-weight: bold;
+            font-variant-numeric: tabular-nums;
+            min-width: 7em;
         }
 
         .news-date-red {
@@ -267,6 +294,38 @@
 
     <!-- Add this line in the <head> section of your HTML -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Structured data: schema.org/Person. Add LinkedIn / X / ORCID / DBLP / Semantic Scholar URLs to "sameAs" as you create them. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Xin Xie",
+      "url": "https://shelsin.github.io/",
+      "image": "https://shelsin.github.io/imgs/profile_pic.png",
+      "jobTitle": "Ph.D. Student",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of New South Wales (UNSW Sydney)",
+        "url": "https://www.unsw.edu.au/"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Dalian University of Technology",
+          "url": "https://en.dlut.edu.cn/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Dalian Maritime University"
+        }
+      ],
+      "knowsAbout": ["Reinforcement Learning", "Video World Models"],
+      "sameAs": [
+        "https://scholar.google.com/citations?user=9GQ3rsAAAAJ",
+        "https://github.com/Shelsin"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -294,14 +353,15 @@
                 <div class="row"><p></p></div>
                 <div class="row"><p></p></div>
                 <div class="row"><p></p></div>
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-sm-4 offset-sm-2">
-                        <img src="imgs/profile_pic.png" id="portrait" style="width: 350px;">
+                        <img src="imgs/profile_pic.png" id="portrait" style="width: 190px; margin-left: 100px;" alt="Xin Xie">
                     </div>
                     <div class="col-sm-5 offset-sm-1">
-                        <div id="header-text-name"> Xin Xie </div>
+                        <h1 id="header-text-name"> Xin Xie </h1>
                         <p></p>
                         <div class="header-text-desc"> Ph.D. student </div>
+                        <div class="header-text-desc"> <a href="https://donggong1.github.io/group/">Artificer AI Lab</a> </div>
                         <div class="header-text-desc"> UNSW, Sydney, Aus</div>
                         <br>
                         <div class="header-text-email">
@@ -320,8 +380,8 @@
 
         <div class="container">
             <div class="row vspace-top">
-                <div class="col offset-sm-1">
-                    <h1>About Me</h1>
+                <div class="col-12" id="content-col">
+                    <h2>About Me</h2>
                     <p>
                         Hello! I am a third-year Ph.D. student at <a href="https://www.unsw.edu.au/">University of New South Wales (UNSW Sydney)</a>, supervised by Dr. <a href="https://donggong1.github.io/">Dong Gong</a>.
                     </p>
@@ -331,43 +391,21 @@
                         I obtained my Bachelor's degree from Dalian Maritime University.
                     </p>
                     <p>
-                        <i><b>My current research interest lies in Reinforcement Learning and Video World Models.</b></i>
+                        My long-term goal is to build <i><b>controllable and adaptive generative systems</b></i>. I see the capability of a trained generative model as <i><b>a starting point rather than a ceiling</b></i>, one that should continue to grow long after training ends.
+                        Much as a harness turns a base LLM into something far more capable and useful than the raw weights alone, the right machinery around a generative model can unlock performance the model itself never reached in training.
+                    </p>
+                    <p>
+                        To this end, my research has progressed from guiding a model's internal states at test time to amortizing that guidance
+                        into a hypernetwork making static weights evolve in real time. These ideas have taken shape in <i><b>diffusion model alignment</b></i>, generating images with higher aesthetic quality and semantic accuracy, and in video generation, enabling precise motion control and customization.
+                        At present I am exploring <i><b>world modeling</b></i>, with a focus on action fidelity and long-horizon memory.
                     </p>
 
                     <div class="row vspace-top-news">
                         <section class="container lead">
                             <div class="vspace-top" style="font-size:16px">
-                                <h1>Internships</h1>
-
-                                <div class="row vspace-top align-items-center">
-                                    <div class="col-sm-3">
-                                        <img src="imgs/bytedance.png" class="img-fluid">
-                                    </div>
-                                    <div class="col">
-                                        <div><b style="font-weight: 900 !important;">ByteDance</b></div>
-                                        <div><i>Jun.2022 ~ Feb.2023</i></div>
-                                        <div>Research Intern in ByteDance Intelligent Creation Lab (Beijing)</div>
-                                        <div>Advisors: <a href="https://scholar.google.com/citations?user=gvUL1ZoAAAAJ&hl=en">Miao Hua</a>, <a href="https://scholar.google.com/citations?user=9rWWCgUAAAAJ&hl=zh-CN">Qian He</a></div>
-                                        <div>Topics: Text-to-image diffusion model and Image-to-Image Translation</div>
-                                    </div>
-                                </div>
-
-                                <div class="row vspace-top align-items-center">
-                                    <div class="col-sm-3">
-                                        <img src="imgs/casia_logo.jpg" class="img-fluid">
-                                    </div>
-                                    <div class="col">
-                                        <div><b style="font-weight: 900 !important;">Institute of Automation, Chinese Academy of Sciences</b></div>
-                                        <div><i>Jul.2021 ~ Sep.2021</i></div>
-                                        <div>Research Assistant in National Laboratory of Pattern Recognition (Beijing)</div>
-                                        <div>Advisors: Associate Prof. <a href="https://hhb072.github.io/">Huaibo Huang</a>, Prof. <a href="https://rhe-web.github.io/">Ran He</a></div>
-                                        <div>Topics: Style Transfer and Image-to-Image Translation</div>
-                                    </div>
-                                </div>
-
-                                <div class="vspace-top-section">
+                                <div>
                                     <a name="Pub"></a>
-                                    <h1>Representative Publications</h1>
+                                    <h2>Representative Publications</h2>
                                     (* indicates equal contribution; ^ indicates the first author is supervisor)
                                     <br>
                                     For full publication list, please refer to my <img src="imgs/google-scholar.svg" alt="Google Scholar" style="width: 20px; height: 20px; vertical-align: middle;"><a href="https://scholar.google.com/citations?user=9GQ3rsAAAAJ"> Google Scholar page.</a>
@@ -383,7 +421,7 @@
                                             Test-Time Weak-to-Strong Alignment: Transferring Implicit Rewards from Weak to Strong Flow Models
                                         </div>
                                         <div class="paper-desc">
-                                            Arxiv, 2026
+                                            arXiv, 2026
                                         </div>
                                         <div class="paper-author">
                                             <span class="author">Xin Xie*, Fan Zhang*, Dong Gong</span>
@@ -428,7 +466,7 @@
                                             HyperAlign: Hypernetwork for Efficient Test-Time Alignment of Diffusion Models
                                         </div>
                                         <div class="paper-desc">
-                                            Arxiv, 2026
+                                            arXiv, 2026
                                         </div>
                                         <div class="paper-author">
                                             <span class="author">Xin Xie, Jiaxian Guo, Dong Gong</span>
@@ -497,7 +535,7 @@
                                             RoNet: Rotation-oriented Continuous Image Translation
                                         </div>
                                         <div class="paper-desc">
-                                            Arxiv, 2024
+                                            arXiv, 2024
                                         </div>
                                         <div class="paper-author">
                                             <span class="author">Yi Li, Xin Xie^, Lina Lei, Haiyan Fu, Yanqing Guo, Ming Yao</span>
@@ -558,7 +596,7 @@
 
                                 <div class="vspace-top-section">
                                     <a name="Pub"></a>
-                                    <h1>Other Collaborations</h1>
+                                    <h2>Other Collaborative Works</h2>
                                 </div>
 
                                 <div class="row vspace-top align-items-center">
@@ -625,7 +663,37 @@
                                 </div>
                                 
                                 <div class="vspace-top-section">
-                                    <h1>Services</h1>
+                                    <h2>Internships</h2>
+                                </div>
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/bytedance.png" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div><b style="font-weight: 900 !important;">ByteDance</b></div>
+                                        <div><i>Jun.2022 ~ Feb.2023</i></div>
+                                        <div>Research Intern in ByteDance Intelligent Creation Lab (Beijing)</div>
+                                        <div>Advisors: <a href="https://scholar.google.com/citations?user=gvUL1ZoAAAAJ&hl=en">Miao Hua</a>, <a href="https://scholar.google.com/citations?user=9rWWCgUAAAAJ&hl=zh-CN">Qian He</a></div>
+                                        <div>Topics: Text-to-image diffusion model and Image-to-Image Translation</div>
+                                    </div>
+                                </div>
+
+                                <div class="row vspace-top align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="imgs/casia_logo.jpg" class="img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div><b style="font-weight: 900 !important;">Institute of Automation, Chinese Academy of Sciences</b></div>
+                                        <div><i>Jul.2021 ~ Sep.2021</i></div>
+                                        <div>Research Assistant in National Laboratory of Pattern Recognition (Beijing)</div>
+                                        <div>Advisors: Associate Prof. <a href="https://hhb072.github.io/">Huaibo Huang</a>, Prof. <a href="https://rhe-web.github.io/">Ran He</a></div>
+                                        <div>Topics: Style Transfer and Image-to-Image Translation</div>
+                                    </div>
+                                </div>
+
+                                <div class="vspace-top-section">
+                                    <h2>Services</h2>
                                 </div>
                                 <div>
                                     I actively serve as a reviewer for CVPR, IJCAI, MICCAI, ICCV, ECCV, NeurIPS, ICLR, ICML, AAAI, WACV.
@@ -634,11 +702,11 @@
 
 
                                 <div class="vspace-top-section">
-                                    <h1>Awards</h1>
+                                    <h2>Awards</h2>
                                 </div>
                                 <div class="row vspace-top-news">
                                     <div class="col-auto news-date">Apr.2026</div>
-                                    <div class="col">The Norman Foo Memorial Best Research Paper Prize, University of New South Wales</div>
+                                    <div class="col">The Norman Foo Memorial Best Research Paper Prize (Runner-up), University of New South Wales</div>
                                 </div>
                                 <div class="row vspace-top-news">
                                     <div class="col-auto news-date">Nov.2025</div>
@@ -686,7 +754,7 @@
 
         <div id="footer" class="vspace-top">
             <div style="text-align:center">
-                Last updated: Jul.2026 <a href="index.html#Home">🔝 Back to Top</a>
+                Last updated: Sep.2026 <a href="index.html#Home">🔝 Back to Top</a>
             </div>
             <div>
             </div>
